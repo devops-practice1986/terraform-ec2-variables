@@ -1,3 +1,10 @@
+	
+	# 1. command line
+	# 2. tfvars
+	# 3. default values
+	# 4. environment variables
+	# 5. prompt
+  
 variable "ami_id" {
   description = "The AMI ID for the EC2 instance"
   type        = string
@@ -48,23 +55,23 @@ variable "ec2_tag_name" {
   type        = string
   default     = "ec2"
 }
-variable "sg_tag_name" {
-  description = "The tag name for the security group"
-  type        = string
-  default     = "Allow_SSH_SG"
-}
-
-# variable "tags" {
-#   description = "A map of tags to assign to the resources"
-#   type        = map(any)
-#   default = {
-#     Name        = "Allow_SSH_SG"
-#     Project     = "expens"
-#     Environment = "dev"
-#     Component   = "backend"
-#     Terraform   = "true"
-#   }
+# variable "sg_tag_name" {
+#   description = "The tag name for the security group"
+#   type        = string
+#   default     = "Allow_SSH_SG"
 # }
+
+variable "tags" {
+  description = "A map of tags to assign to the resources"
+  type        = map(any)
+  default = {
+    Name        = "Allow_SSH_SG"
+    Project     = "expens"
+    Environment = "dev"
+    Component   = "backend"
+    Terraform   = "true"
+  }
+}
 
 
 
