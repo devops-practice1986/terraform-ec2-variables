@@ -48,24 +48,23 @@ variable "ec2_tag_name" {
   type        = string
   default     = "ec2"
 }
-
 variable "sg_tag_name" {
   description = "The tag name for the security group"
   type        = string
-  default     = "Allow_ALL_SSH_22"
+  default     = "Allow_SSH_SG"
 }
 
-variable "tags" {
-  description = "A map of tags to assign to the resources"
-  type        = map(any)
-  default = {
-    Name        = "Allow_SSH_SG"
-    Project     = "expens"
-    Environment = "dev"
-    Component   = "backend"
-    Terraform   = "true"
-  }
-}
+# variable "tags" {
+#   description = "A map of tags to assign to the resources"
+#   type        = map(any)
+#   default = {
+#     Name        = "Allow_SSH_SG"
+#     Project     = "expens"
+#     Environment = "dev"
+#     Component   = "backend"
+#     Terraform   = "true"
+#   }
+# }
 
 
 
