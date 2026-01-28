@@ -55,6 +55,17 @@ variable "sg_tag_name" {
   default     = "Allow_SSH_SG"
 }
 
+variable "tags" {
+  description = "A map of tags to assign to the resources"
+  type        = map
+  default     = {
+    Name = "Allow_SSH_SG"
+    Project = "expens"
+    Environment = "dev"
+    Component = "backend"
+    Terraform = "true"
+  }
+}
 
 
 

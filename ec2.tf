@@ -27,7 +27,7 @@ resource "aws_security_group" "sg" {
     protocol    = "-1"
     cidr_blocks = [var.allowed_cidr]
   }
-  tags = {
-    Name = var.sg_tag_name
-  }
+  tags = var.tags
 }
+
+
