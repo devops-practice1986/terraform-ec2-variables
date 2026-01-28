@@ -43,6 +43,12 @@ variable "sg_description" {
   default     = "security group for SSH access"
 }
 
+variable "ec2_tag_name" {
+  description = "The tag name for the EC2 instance"
+  type        = string
+  default     = "ec2"
+}
+
 variable "sg_tag_name" {
   description = "The tag name for the security group"
   type        = string
